@@ -3,6 +3,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+// import Helmet from "react-helmet"
 import './App.css';
 import './main.css';
 import Home from "./Pages/Home";
@@ -25,10 +26,15 @@ import Finance from "./Pages/Finance";
 import Popculture from "./Pages/Popculture";
 import Following from "./Pages/Following";
 import NewsPolitics from "./Pages/NewsPolitics";
+import NewChannel from "./Pages/NewChannel";
+import Channel from "./Pages/Channel";
+import Test from "./Pages/Test";
 
 function App() {
   return (
     <>
+
+
     <Router>
       <Switch>
         <Route exact path="/">
@@ -90,6 +96,15 @@ function App() {
         </Route>
         <Route path="/wildwest">
           <Education/>
+        </Route>
+        <Route path="/channel/new">
+          <NewChannel/>
+        </Route>
+        <Route path="/channels">
+          <Channel/>
+        </Route>
+        <Route path="/test">
+          <Test/>
         </Route>
       </Switch>
     </Router>
